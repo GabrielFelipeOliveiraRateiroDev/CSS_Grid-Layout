@@ -1,0 +1,20 @@
+/* ~ RESET GERAL */
+
+* {
+
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Vollkorn', serif;
+
+}
+
+img {
+
+    max-width: 100px;
+
+}
+
+/* ^ GRID GERAL */
+
