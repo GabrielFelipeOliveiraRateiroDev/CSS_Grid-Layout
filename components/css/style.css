@@ -352,3 +352,30 @@ p {
     letter-spacing: -0.005em;
 
 }
+
+/* ~ +++++++==========SCROLL BAR STYLE=========++++++++ */
+
+::-webkit-scrollbar {
+
+    background-color: var(--bg-color-sidenav);
+    width: 15px;
+
+    
+}
+
+::-webkit-scrollbar-thumb {
+
+    background-color: var(--bg-color-header2);
+    border-radius: 20px;
+    width: 5px;
+    margin-right: 3px;
+
+}
+
+::-webkit-scrollbar-track-piece {
+
+    display: none;
+
+}
+
+/* ~ +++++++===================================++++++++ */
