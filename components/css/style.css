@@ -330,6 +330,8 @@ p {
     align-content: start;
     padding: 30px;
     gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-content: space-around;
 
 }
 
@@ -352,6 +354,24 @@ p {
     letter-spacing: -0.005em;
 
 }
+
+/* ~ +++++++==============ANIMATION============++++++++ */
+
+@keyframes animationArrowSideNav {
+ 
+    from {
+
+        right: 30px;
+
+    } to {
+
+        right: 20px;
+
+    }
+    
+}
+
+/* ~ +++++++===================================++++++++ */
 
 /* ~ +++++++==========SCROLL BAR STYLE=========++++++++ */
 
@@ -379,3 +399,122 @@ p {
 }
 
 /* ~ +++++++===================================++++++++ */
+
+
+/* ~ +++++++========== RESPONSIVIDADE ==============++++++++ */
+
+@media (max-width: 1200px) {
+    
+    .estrutura {
+
+        grid-template-areas:
+        
+            "header  header  header"
+            "sidenav content content"
+            "sidenav anuncios anuncios"
+            "footer  footer  footer"
+
+        ;
+
+    }
+
+}
+
+@media (max-width: 760px) {
+
+    .estrutura {
+
+        grid-template-columns: 100%;
+
+        grid-template-areas:
+        
+            "header"
+            "sidenav"
+            "content"
+            "anuncios"
+            "footer"
+
+        ;
+
+    }
+
+    .header {
+
+        grid-template-columns: auto;
+    
+    }
+
+    .header nav a {
+
+        font-size: 1em;
+
+    }
+
+    .header nav ul {
+
+        gap: 10px;
+
+    }
+
+    .logo {
+
+        margin-bottom: 20px;
+
+    }
+
+    /* ^ SIDE NAV */
+    
+    .sidenav {
+
+        padding: 0 30px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        position: relative;
+
+    }
+
+    .sidenav::after {
+
+        content: '→';
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        color: rgba(0, 0, 0, 0.3);
+        font-size: 18px;
+        font-weight: bold;
+        animation: animationArrowSideNav 0.6s ease-in-out 0.2s  infinite  alternate ;
+        
+    }
+
+    .sidenav ul {
+        
+        display: flex;
+        
+    }
+    
+    .sidenav ul li {
+
+        flex: 1 0 60px;
+
+    }
+    
+    .sidenav ul li a {
+
+        margin: 30px 30px 30px 0px;
+
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .content {
+
+        grid-template-columns: auto;
+
+    }
+
+}
+
+/* ~ +++++++========================================++++++++ */
