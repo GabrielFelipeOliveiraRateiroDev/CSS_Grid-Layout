@@ -22,12 +22,14 @@
     --bx-color-sidenav:  #2c2c2c26;
 
     --primary-color: #fff;
+    --color-text-content: #000000b3;
 
 }
 
 img {
 
     max-width: 100%;
+    width: 100%;
     display: block;
     border-radius: 5px;
 
@@ -132,6 +134,168 @@ img {
 .content {
 
     grid-area: content;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+}
+
+.col-wide {
+
+    grid-column: 1/-1;
+
+}
+
+.imagem1 {
+
+    grid-row: span 2;
+    align-self: end;
+    
+}
+
+.imagem2 {
+
+    align-self: end;
+
+}
+
+/* ^ TITULO */
+
+.titulo {
+
+    color: var(--bg-color-header2);
+    
+}
+
+.titulo h1 {
+
+    font-size: 3.75em;
+    line-height: 1;
+    font-weight: 700;
+
+}
+
+.titulo span {
+
+    font-size: 0.875em;
+    font-style: italic;
+
+}
+
+/* ^ CARACTERÍSTICAS */
+
+.caracteristicas {
+
+    display: flex;
+    /* gap: 30px; */
+    align-items: flex-start;
+
+}
+
+.caracteristicas > div {
+
+    width: 80px;
+    text-align: center;
+    background: linear-gradient(135deg, var(--bg-color-header1), var(--bg-color-header2));
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px var(--bx-color-sidenav);
+    position: relative;
+
+}
+
+.caracteristicas > div:first-child {
+
+    margin-right: 30px;
+
+}
+
+.caracteristicas span {
+
+    display: block;
+    color: var(--bg-color-header2);
+
+}
+
+.numero {
+
+    color: var(--bg-color-header2);
+    font-size: 3em;
+    line-height: 1;
+    margin: 10px auto;
+
+}
+
+.rotulo {
+
+    background-color: var(--primary-color);
+    border-radius: 0px 0px 5px 5px;
+    padding: 5px 0px;
+    position: relative;
+    top: 2px;
+
+}
+
+.destaque {
+
+    font-size: 0.875em;
+    color: var(--bg-color-header2);
+    max-width: 16em;
+
+}
+
+.citacao, .atributos {
+
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px 0px var(--bx-color-sidenav);
+    background: linear-gradient(135deg, var(--bg-color-header1), var(--bg-color-header2));
+    align-self: start;
+
+}
+
+.citacao p {
+
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    color: var(--primary-color);
+
+}
+
+.atributos li {
+
+    color: var(--primary-color);
+    font-family: courier, monospace;
+    font-size: 1.125em;
+    padding: 15px;
+
+}
+
+.atributos li + li {
+
+    border-top: 2px solid var(--bg-color-header2);
+
+}
+
+/* ^ ESTILOS GERAIS DO CONTENT */
+
+p {
+
+    font-size: 1.2em;
+    line-height: 1.6;
+    letter-spacing: -0.005em;
+    color: var(--color-text-content);
+
+}
+
+.informacoes p + p{
+
+    margin-top: 30px;
 
 }
 
@@ -147,8 +311,6 @@ img {
     gap: 30px;
 
 }
-
-
 
 /* ^ FOOTER */
 
