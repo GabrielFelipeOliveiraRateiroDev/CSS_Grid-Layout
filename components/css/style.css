@@ -35,6 +35,27 @@ img {
 
 }
 
+img.imagem1, 
+img.imagem2,
+img.imagem3 {
+
+    filter: blur(1.2px);
+    transition: filter 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+img.imagem1:hover, 
+img.imagem2:hover,
+img.imagem3:hover {
+
+    cursor: pointer;
+    filter: blur(0px);
+    transform: translateY(2px) scale(103%);
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.507);
+
+}
+
 /* ^ GRID GERAL */
 
 .estrutura {
